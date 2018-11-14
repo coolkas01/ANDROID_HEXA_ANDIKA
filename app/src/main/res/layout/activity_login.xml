@@ -12,7 +12,7 @@
         android:inputType="textPersonName"
         android:ems="10"
         android:id="@+id/edt_username"
-        android:hint="User ID"
+        android:hint="Username"
         android:layout_marginTop="8dp"
         app:layout_constraintTop_toTopOf="parent"
         android:layout_marginBottom="8dp"
