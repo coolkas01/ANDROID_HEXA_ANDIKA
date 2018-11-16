@@ -18,8 +18,6 @@ import org.json.JSONArray;
 import org.json.JSONException;
 import org.json.JSONObject;
 
-
-
 public class LoginActivity extends AppCompatActivity {
 
     private static final String TAG = "LoginActivity";
@@ -35,16 +33,13 @@ public class LoginActivity extends AppCompatActivity {
 
         AndroidNetworking.initialize(this);
 
-        //User user = new User();
-
-        eUsername = (EditText) findViewById(R.id.edt_username);
-        ePassword = (EditText) findViewById(R.id.edt_password);
-        bLogin = (Button) findViewById(R.id.btn_login);
+        eUsername = findViewById(R.id.edt_username);
+        ePassword = findViewById(R.id.edt_password);
+        bLogin = findViewById(R.id.btn_login);
 
         bLogin.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                //eUsername.setText("tes");
                 prosesLogin();
             }
         });
@@ -57,7 +52,7 @@ public class LoginActivity extends AppCompatActivity {
         String password = ePassword.getText().toString();
 
         AndroidNetworking.post("http://hexavara.ip-dynamic.com/androidrec/public/api/login")
-                .addBodyParameter("username", username)
+                .addBodyParameter("username", "hexavara")
                 .addBodyParameter("password", "6hexavara6")
                 .setPriority(Priority.MEDIUM)
                 .build()
