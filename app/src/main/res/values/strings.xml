@@ -1,4 +1,4 @@
 <resources>
-    <string name="app_name">HEXAVARA</string>
-    <string name="title_activity_profile">ProfileActivity</string>
+    <string name="app_name">Android</string>
+    <string name="title_activity_profile">Profile</string>
 </resources>
